@@ -6,7 +6,7 @@ export const environment = {
   production: false
 };
 
-export const BaseURL = 'http://localhost:8080/';
+export const BaseURL = 'http://52.191.193.0:8080/';
 
 /*
  * In development mode, to ignore zone related error stack frames such as
