@@ -1,0 +1,13 @@
+ # stage 1
+FROM node as node
+WORKDIR /app
+COPY ./Angular .
+RUN npm ci
+RUN npm run build --prod
+
+# ENTRYPOINT [ "ng","serve"]  
+# stage 2
+FROM nginx:alpine
+COPY ./Angular/nginx.conf /etc/nginx/nginx.conf
+COPY --from=node /app/dist/weatherManApp /usr/share/nginx/html
+# CMD [ "npm", "start" ]

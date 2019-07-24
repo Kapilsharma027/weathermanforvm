@@ -1,0 +1,64 @@
+.map-container { height: 100%; 
+}
+.map-content { display: block; 
+}
+.description { margin-top: 10px; padding: 15px; background-color: bisque; border: 1px solid orange;
+
+}
+agm-map {
+  height: 300px;
+}
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-color:black;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: LightGray;
+ /* background-attachment: "fa fa-search"; */
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid darkgray;
+  padding: 5px; 
+  width: 600px;
+  height: auto;  
+}
+
+.example {
+  width: 300px;
+  height: auto;
+  max-height: 200px;
+  padding: 3px;
+  overflow: auto;
+}
+
+.card {
+ max-height: 20px
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

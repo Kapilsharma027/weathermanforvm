@@ -1,0 +1,148 @@
+<!-- 
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a class="w3-bar-item">The Weather Man</a>
+
+    <div class="w3-right w3-hide-small">
+      <a class="w3-bar-item" *ngIf="showLogin">{{username}}</a>
+      <button *ngIf="showLoginButton" mat-raised-button (click)='openloginDialog()'>Login</button>
+      <button mat-raised-button (click)='openNewAccountDialog()'>Create an account</button>
+    </div>
+  </div>
+</div>
+
+
+<header class="w3-display-container w3-content w3-wide" style="max-width:2000px;" height="800" id="home">
+  <img class="w3-image" src="assets/weather.jpg" alt="Architecture" width="1500" height="800">
+
+  <script type="text/javascript">
+
+  </script>
+  <div class="w3-third w3-display-left w3-margin-top ">
+
+  </div>
+  <div class="w3-third w3-display-right w3-margin-top "  >
+   
+
+    <div style="height: 400px ; width: 400px;">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false" >
+
+        <agm-marker *ngFor="let m of markers; let i = index"  [latitude]="m.lat" [longitude]="m.lng"
+          [label]="m.label"  >
+
+
+        </agm-marker>
+
+
+      </agm-map>
+    </div>
+
+  </div>
+
+  <div class="w3-third w3-margin-top  w3-display-left " style="top:200px;left:100px">
+
+    <h4><u>Select Location</u></h4>
+
+
+    <input class="w3-select w3-border" placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" #search [formControl]="searchControl">
+
+  </div>
+
+</header>
+
+
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+
+
+  <div class="w3-container w3-padding-32" id="projects">
+
+    <div class="w3-container w3-grey w3-center">
+      <h1>Service Providers</h1>
+
+    </div>
+    <div class=" w3-row ">
+      <div class="w3-col w3-container" style="width:20%">
+
+        <div *ngIf="weatherInfoOpenWeather ">
+          <h3>Open Weather Map</h3>
+          <p>
+            Temperature(F):{{weatherInfoOpenWeather?.main?.temp}}
+            <br>Humidity:{{weatherInfoOpenWeather?.main.humidity}}
+            <br> Min Temperature (F):{{weatherInfoOpenWeather?.main?.temp_min}}
+            <br>Max Temperature (F):{{weatherInfoOpenWeather?.main?.temp_max}}
+            <br> Pressure:{{weatherInfoOpenWeather?.main?.pressure}}
+            <br> Description:{{weatherInfoOpenWeather?.weather[0]?.description}}
+          </p>
+        </div>
+
+      </div>
+      <div class="w3-col w3-container" style="width:20%">
+        <div *ngIf="weatherInfoWeatherbit ">
+          <h3>Weather Bit</h3>
+          <p>
+            Temperature(C):{{weatherInfoWeatherbit?.temp}}
+            <br>Humidity:{{weatherInfoWeatherbit?.clouds}}
+            <br> Min Temperature(C):{{weatherInfoWeatherbit?.app_temp}}
+            <br>Max Temperature(C):{{weatherInfoWeatherbit?.aqi}}
+            <br> Pressure:{{weatherInfoWeatherbit?.pres}}
+            <br> Wind Speed:{{weatherInfoWeatherbit?.wind_spd}}
+            <br> Precipitation:{{weatherInfoWeatherbit?.precip}}
+            <br> Description:{{weatherInfoWeatherbit?.weather?.description}}
+          </p>
+        </div>
+
+      </div>
+      <div class="w3-col w3-container" style="width:20%">
+
+        <div *ngIf="weatherInfoUnlock ">
+          <h3>Weather Unlocked</h3>
+          <p>
+            Temperature(C):{{weatherInfoUnlock?.temp_c}}
+            <br>Humidity:{{weatherInfoUnlock?.humid_pct}}
+            <br> Min Temperature (C):{{weatherInfoUnlock?.dewpoint_c}}
+            <br>Max Temperature (C):{{weatherInfoUnlock?.feelslike_c}}
+            <br> Pressure:{{weatherInfoUnlock?.slp_mb}}
+            <br> Wind Speed:{{weatherInfoUnlock?.windspd_kmh}}
+            <br> Description:{{weatherInfoUnlock?.wx_desc}}
+          </p>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="w3-col w3-container" style="width:20%">
+
+        <div *ngIf="weatherInfoDarkSky ">
+          <h3>Dark Sky</h3>
+          <p>
+            Temperature(C):{{weatherInfoDarkSky?.temperature}}
+            <br>Humidity:{{weatherInfoDarkSky?.humidity}}
+            <br>Precipitation:{{weatherInfoDarkSky?.precipIntensity}}
+            <br>Max Temperature (C):{{weatherInfoDarkSky?.apparentTemperature}}
+            <br> Pressure:{{weatherInfoDarkSky?.pressure}}
+            <br> Wind Speed:{{weatherInfoDarkSky?.windSpeed}}
+            <br> summary:{{weatherInfoDarkSky?.summary}}
+          </p>
+        </div>
+
+      </div>
+      <div class="w3-col w3-container" style="width:20%">
+        <div *ngIf="weatherInfoUnlock ">
+          <h3>Accu Weather</h3>
+          <p>
+            Temperature(C):{{weatherInfoAccu?.Temperature?.Minimum?.Value}}
+            <br>Wind Speed:{{weatherInfoAccu?.Day?.Wind?.Speed?.Value}}
+            <br> Min Temperature (C):{{weatherInfoAccu?.Temperature?.Minimum?.Value}}
+            <br>Max Temperature (C):{{weatherInfoAccu?.Temperature?.Maximum?.Value}}
+            <br> Precipitation:{{weatherInfoAccu?.Day?.HoursOfPrecipitation}}
+            <br> Description:{{weatherInfoAccu?.Day?.LongPhrase}}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div> -->
+
+  <router-outlet></router-outlet>
+  <!-- <app-reset-password></app-reset-password> -->
+

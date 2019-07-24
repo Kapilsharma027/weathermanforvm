@@ -1,0 +1,90 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.marR5 {
+    margin-right: 5px;
+  }
+  
+  .marR10 {
+    margin-right: 10px !important;
+  }
+  
+  .marR20 {
+    margin-right: 20px !important;
+  }
+  
+  .marT15 {
+    margin-top: 15px !important;
+  }
+  
+  .marT30 {
+    margin-top: 30px !important;
+  }
+  
+  .marT10 {
+    margin-top: 10px !important;
+  }
+  
+  .marT20 {
+    margin-top: 20px !important;
+  }
+  
+  .marR0 {
+    margin-right: 0 !important;
+  }
+  
+  .marT25 {
+    margin-top: 25px !important;
+  }
+  
+  .marT5 {
+    margin-top: 5px !important;
+  }
+  
+  .marT0 {
+    margin-top: 0 !important;
+  }
+  
+  .marT2 {
+    margin-top: 2px;
+  }
+  
+  .marB15 {
+    margin-bottom: 15px !important;
+  }
+  
+  .marB20 {
+    margin-bottom: 20px !important;
+  }
+  
+  .marB10 {
+    margin-bottom: 10px !important;
+  }
+  
+  .marB5 {
+    margin-bottom: 5px !important;
+  }
+  
+  .marB0 {
+    margin-bottom: 0 !important;
+  }
+  
+  .marL10 {
+    margin-left: 10px !important;
+  }
+  
+  .marL5 {
+    margin-left: 5px !important;
+  }
+  
+  .padB0 {
+    padding-bottom: 0 !important;
+  }
+  .material-icons {
+    vertical-align: middle;
+  }
+  
+  .location-icon {
+    margin-left: -4px;
+  }

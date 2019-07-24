@@ -1,0 +1,54 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    expose:
+      - 6379
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=bootdb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Uchihasasuke@123
+      - MYSQL_ROOT_PASSWORD=Uchihasasuke@123
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    volumes:
+      - ./Java/my-db:/var/lib/mysql
+
+  java:
+    build:
+      context: .
+      dockerfile: Java/DOCKERFILE
+    links:
+      - mysql
+      - redis
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ~/Java/.m2:/root/.m2
+    # environment:
+    #   - MYSQL_USERNAME=root
+    #   - MYSQL_PASSWORD=Uchihasasuke@123
+    #   - MYSQL_HOST=mysql
+    #   - MYSQL_URL=jdbc:mysql://mysql/bootdb?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    #   - REDIS_URL=redis://cache
+    #   - REDIS_PORT=6379
+      # - LOG_LEVEL=DEBUG
+    depends_on:
+      - mysql
+      - redis
+
+  angular:
+      build:
+        context: .
+        dockerfile: Angular/DOCKERFILE
+        # image: 'my-angular-app'        
+      ports:
+        - 80:3000
